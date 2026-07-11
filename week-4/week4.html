@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            input[type=text]{
+                width:100%;
+                background-color:mediumseagreen;
+                color:white;
+                border:2px solid;
+                padding:15px;
+            }
+            input[type=number]
+            {
+               width:100%;
+                background-color:plum;
+                color:white;
+                border:2px solid;
+                padding:15px; 
+            }
+            input[type=button]{
+                height:30px;
+                background-color:mediumturquoise;
+                color:white;
+                border:2px solid;
+                margin-top:50px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <form>
+            Name<input type="text" placeholder="Enter your name">
+            Occupation<input type="text" placeholder="Enter your occupation">
+            Amount<input type="number" placeholder="Enter your loan amount" id="amount">
+            Rate of Interest<input type="number" placeholder="Enter your rate of interest" id="roi">
+            Tenure<input type="number" placeholder="Enter number of years" id="tenure">
+            <input type="button" value="Calculate EMI" onclick="calculate()">
+        </form>
+        <p id="result"></p>
+        <script>
+            function calculate(){
+            var A=document.getElementById("amount").value;
+            var interest=document.getElementById("roi").value;
+            var years=document.getElementById("tenure").value;
+            var months=years*12;
+            var R=interest/12*100;
+            var EMI=A*R*Math.pow(1+R,months)/(Math.pow(1+R,months)-1);
+            document.getElementById("result").innerHTML="<h2>Your EMI is: </h2>"+EMI.toFixed(2);
+            }
+        </script>
+        <p align="right"><b>P.HEMA PRIYA</b><br><b>24881A12B6</b></p>
+    </body>
+</html>
