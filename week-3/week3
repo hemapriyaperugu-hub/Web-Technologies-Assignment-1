@@ -1,0 +1,17 @@
+<html>
+    <body bgcolor="lightgreen">
+        <h3 align="center"><b>Registration Form</b></h3><br>
+        <form>
+            <b>Name: </b><input type="text" placeholder="Enter First Name"><br>
+            <b>Last Name: </b><input type="text" placeholder="Enter Last Name"><br>
+            <b>Email: </b><input type="email" placeholder="Enter Email Address"><br>
+            <b>Password: </b><input type="password"><br>
+            <b>Gender: </b><br>Male <input type="option" name="gender"><br>
+                               Female <input type="option" name="gender"><br>
+                               Other <input type="option" name="gender"><br>
+            <b>Age: </b><input type="number" min="1" max="100" slot="1">
+            <b>Preferneces: </b>
+        </form>
+
+    </body>
+    </html>
